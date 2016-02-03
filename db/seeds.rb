@@ -5,3 +5,13 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Difficulty.create(
+  [
+    {name: "Easy"},
+    {name: "Normal"},
+    {name: "Difficult"},
+    {name: "Extream"},
+    {name: "ExExtream"}
+  ]
+)
+
