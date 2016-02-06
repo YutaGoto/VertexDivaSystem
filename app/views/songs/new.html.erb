@@ -1,0 +1,18 @@
+<p>新規登録</p>
+<%= form_for :song, url: songs_path do |f| %>
+  <p>
+    <%= f.label '曲名' %>
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= f.label '難易度' %>
+    <% Difficulty.all.each do |difficulty| %>
+      <label><input value="<%= difficulty.id %>" name="song[difficulty_ids][]" type="checkbox"><%= difficulty.name %></label>
+    <% end %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

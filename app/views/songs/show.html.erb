@@ -1,0 +1,13 @@
+<div>
+  <%= @song.title %>
+</div>
+
+<div>
+  <% if @song.try(:difficulties).present? %>
+    <% @song.difficulties.each do |d| %>
+      <%= d.name %>
+    <% end %>
+  <% end %>
+</div>
+
+<%= link_to "edit", edit_song_path(@song.id) %>
