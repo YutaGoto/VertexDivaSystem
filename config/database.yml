@@ -12,7 +12,7 @@ development:
   host: <%= Rails.application.secrets.database_master[:host] %>
   username: <%= Rails.application.secrets.database_master[:username] %>
   password: <%= Rails.application.secrets.database_master[:password] %>
-  database: <%= Rails.application.secrets.try(:database) || 'vertex_diva_develop' %>
+  database: <%= Rails.application.secrets.try(:database) || 'csv_develop' %>
   slave: &default_slave
     host: <%= Rails.application.secrets.database_slave[:host] %>
     username: <%= Rails.application.secrets.database_slave[:username] %>
@@ -23,7 +23,7 @@ test:
   host: <%= Rails.application.secrets.database_master[:host] %>
   username: <%= Rails.application.secrets.database_master[:username] %>
   password: <%= Rails.application.secrets.database_master[:password] %>
-  database: vertex_diva_test
+  database: csv_test
   slave: &default_slave
     host: <%= Rails.application.secrets.database_slave[:host] %>
     username: <%= Rails.application.secrets.database_slave[:username] %>
@@ -31,22 +31,22 @@ test:
 
 staging:
   <<: *default
-  host: <%= Rails.application.secrets.database_master[:host] %>
-  username: <%= Rails.application.secrets.database_master[:username] %>
-  password: <%= Rails.application.secrets.database_master[:password] %>
-  database: vertex_diva_staging
+  host: ec2-107-21-218-93.compute-1.amazonaws.com
+  username: rdyvmgeepwcsyg
+  password: HNDHODZxxrxV0DTGuF0vzMTorz
+  database: d6i65a0v2g0m5j
   slave: &default_slave
-    host: <%= Rails.application.secrets.database_slave[:host] %>
-    username: <%= Rails.application.secrets.database_slave[:username] %>
-    password: <%= Rails.application.secrets.database_slave[:password] %>
+    host: ec2-107-21-218-93.compute-1.amazonaws.com
+    username: rdyvmgeepwcsyg
+    password: HNDHODZxxrxV0DTGuF0vzMTorz
 
 production:
   <<: *default
-  host: <%= Rails.application.secrets.database_master[:host] %>
-  username: <%= Rails.application.secrets.database_master[:username] %>
-  password: <%= Rails.application.secrets.database_master[:password] %>
-  database: vertex_diva_production
+  host: ec2-107-21-218-93.compute-1.amazonaws.com
+  username: rdyvmgeepwcsyg
+  password: HNDHODZxxrxV0DTGuF0vzMTorz
+  database: d6i65a0v2g0m5j
   slave: &default_slave
-    host: <%= Rails.application.secrets.database_slave[:host] %>
-    username: <%= Rails.application.secrets.database_slave[:username] %>
-    password: <%= Rails.application.secrets.database_slave[:password] %>
+    host: ec2-107-21-218-93.compute-1.amazonaws.com
+    username: rdyvmgeepwcsyg
+    password: HNDHODZxxrxV0DTGuF0vzMTorz
