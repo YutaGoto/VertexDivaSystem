@@ -29,17 +29,6 @@ test:
     username: <%= Rails.application.secrets.database_slave[:username] %>
     password: <%= Rails.application.secrets.database_slave[:password] %>
 
-staging:
-  <<: *default
-  host: <%= Rails.application.secrets.database_master[:host] %>
-  username: <%= Rails.application.secrets.database_master[:username] %>
-  password: <%= Rails.application.secrets.database_master[:password] %>
-  database: vertex_diva_staging
-  slave: &default_slave
-    host: <%= Rails.application.secrets.database_slave[:host] %>
-    username: <%= Rails.application.secrets.database_slave[:username] %>
-    password: <%= Rails.application.secrets.database_slave[:password] %>
-
 production:
   <<: *default
   host: <%= Rails.application.secrets.database_master[:host] %>
