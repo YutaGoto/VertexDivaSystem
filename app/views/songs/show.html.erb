@@ -1,8 +1,10 @@
 <div>
+  <p>曲名</p>
   <%= @song.title %>
 </div>
 
 <div>
+  <p>難易度</p>
   <% if @song.try(:difficulties).present? %>
     <% @song.difficulties.each do |d| %>
       <%= d.name %>
@@ -11,3 +13,4 @@
 </div>
 
 <%= link_to "edit", edit_song_path(@song.id) %>
+<%= link_to "index", songs_path %>
