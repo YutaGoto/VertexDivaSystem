@@ -1,4 +1,4 @@
 <p>編集</p>
 <%= form_for :song, url: song_path(@song), method: :patch do |f| %>
-  <%= render 'form' %>
+  <%= render 'form', f: f %>
 <% end %>
