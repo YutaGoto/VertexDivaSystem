@@ -1,25 +1,4 @@
 <p>編集</p>
 <%= form_for :song, url: song_path(@song), method: :patch do |f| %>
-  <p>
-    <%= f.label '曲名' %>
-    <%= f.text_field :title, placeholder: 'みくみくにしてあげる【してやんよ】' %>
-  </p>
-
-  <p>
-    <%= f.label '難易度' %>
-    <% Difficulty.all.each do |difficulty| %>
-      <label>
-        <input value="<%= difficulty.id %>" name="song[difficulty_ids][]" type="checkbox"
-          <% if DifficultySong.where(song_id: params[:id]).pluck(:difficulty_id).include?(difficulty.id) %>
-            checked="checked"
-            <% end %>
-        >
-        <%= difficulty.name %>
-      </label>
-    <% end %>
-  </p>
-
-  <p>
-    <%= f.submit %>
-  </p>
+  <%= render 'form' %>
 <% end %>
