@@ -4,6 +4,11 @@
 </p>
 
 <p>
+  <%= f.label '公開日' %>
+  <%= f.text_field :release_date %>
+</p>
+
+<p>
   <%= f.label '難易度' %>
   <% Difficulty.all.each do |difficulty| %>
     <label><input value="<%= difficulty.id %>" name="song[difficulty_ids][]" type="checkbox"><%= difficulty.name %></label>
