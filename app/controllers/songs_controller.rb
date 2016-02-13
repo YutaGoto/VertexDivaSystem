@@ -43,7 +43,7 @@ class SongsController < ApplicationController
 	def song_params
 		params.require(:song).permit(
 			:title,
-			:release_date
+			:release_date,
 			difficulty_ids: []
 		)
 	end
