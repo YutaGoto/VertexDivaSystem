@@ -25,7 +25,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 # to enable features such as static asset serving
-gem 'rails_12factor'
+# gem 'rails_12factor'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -38,6 +38,7 @@ gem 'rails_12factor'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'byebug'
   gem 'pry-rails'
   gem 'pry-doc'
   gem 'pry-stack_explorer'
@@ -49,7 +50,6 @@ group :development, :test do
   gem 'awesome_print'
   gem 'xray-rails'
   gem 'rack-mini-profiler'
-  gem 'puma'
 end
 
 group :development do
