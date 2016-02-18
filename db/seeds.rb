@@ -1,10 +1,5 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+# マスターデータ
+Difficulty.destroy_all
 Difficulty.create(
   [
     {name: "Easy"},
@@ -12,6 +7,26 @@ Difficulty.create(
     {name: "Difficult"},
     {name: "Extream"},
     {name: "ExExtream"}
+  ]
+)
+
+# difficulty_ids
+# 1: Easy
+# 2: Normal
+# 3: Difficult
+# 4: Extream
+# 5: ExExtream
+
+# 曲データ
+
+Song.destroy_all
+Song.create(
+  [
+    {
+      title: "あいうえお",
+      release_date: "2015-12-12",
+      difficulty_ids: [1,2,3,4,5]
+    }
   ]
 )
 

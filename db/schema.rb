@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20160203145625) do
   create_table "difficulty_songs", force: :cascade do |t|
     t.integer  "song_id",       null: false
     t.integer  "difficulty_id", null: false
-    t.integer  "ster"
+    t.integer  "star"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
   end
@@ -35,8 +35,9 @@ ActiveRecord::Schema.define(version: 20160203145625) do
 
   create_table "songs", force: :cascade do |t|
     t.string   "title"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "release_date"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
 end
