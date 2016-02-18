@@ -14,7 +14,6 @@ class SongsController < ApplicationController
   end
 
   def index
-    fail
     @songs = Song.all
   end
 
