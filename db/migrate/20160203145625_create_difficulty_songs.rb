@@ -3,7 +3,6 @@ class CreateDifficultySongs < ActiveRecord::Migration
     create_table :difficulty_songs do |t|
       t.references  :song, index: true, null: false
       t.references  :difficulty, index: true, null: false
-      t.integer     :star
 
       t.timestamps null: false
     end

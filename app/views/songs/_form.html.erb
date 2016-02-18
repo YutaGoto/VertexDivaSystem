@@ -23,5 +23,19 @@
 </p>
 
 <p>
+  <%= f.label 'ボーカル' %>
+  <% Vocalist.all.each do |vocalist| %>
+    <label>
+      <input value="<%= vocalist.id %>" name="song[vocalist_ids][]" type="checkbox"
+        <% if VocalistSong.where(song_id: params[:id]).pluck(:vocalist_id).include?(vocalist.id) %>
+          checked="checked"
+          <% end %>
+      >
+      <%= vocalist.name %>
+    </label>
+  <% end %>
+</p>
+
+<p>
   <%= f.submit %>
 </p>

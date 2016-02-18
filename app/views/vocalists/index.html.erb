@@ -1,0 +1,17 @@
+<div>
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>曲名</th>
+      <th></th>
+    </tr>
+    <% @vocalists.each do |vocalist| %>
+      <tr>
+        <td><%= vocalist.id %></td>
+        <td><%= vocalist.name %></td>
+        <td><%= link_to "show", vocalist_path(vocalist.id) %></td>
+      </tr>
+    <% end %>
+  </table>
+  <%= link_to "new", new_vocalist_path %>
+</div>

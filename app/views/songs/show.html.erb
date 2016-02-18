@@ -21,5 +21,14 @@
   <% end %>
 </div>
 
+<div>
+  <p>ボーカル</p>
+  <% if @song.try(:vocalists).present? %>
+    <% @song.vocalists.each do |v| %>
+      <%= v.name %>
+    <% end %>
+  <% end %>
+</div>
+
 <%= link_to "edit", edit_song_path(@song.id) %>
 <%= link_to "index", songs_path %>

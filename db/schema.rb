@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160203145625) do
+ActiveRecord::Schema.define(version: 20160218135607) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,7 +25,6 @@ ActiveRecord::Schema.define(version: 20160203145625) do
   create_table "difficulty_songs", force: :cascade do |t|
     t.integer  "song_id",       null: false
     t.integer  "difficulty_id", null: false
-    t.integer  "star"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
   end
@@ -38,6 +37,22 @@ ActiveRecord::Schema.define(version: 20160203145625) do
     t.datetime "release_date"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+  end
+
+  create_table "vocalist_songs", force: :cascade do |t|
+    t.integer  "song_id",     null: false
+    t.integer  "vocalist_id", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "vocalist_songs", ["song_id"], name: "index_vocalist_songs_on_song_id", using: :btree
+  add_index "vocalist_songs", ["vocalist_id"], name: "index_vocalist_songs_on_vocalist_id", using: :btree
+
+  create_table "vocalists", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

@@ -44,7 +44,8 @@ class SongsController < ApplicationController
 		params.require(:song).permit(
 			:title,
 			:release_date,
-			difficulty_ids: []
+			difficulty_ids: [],
+			vocalist_ids: []
 		)
 	end
 

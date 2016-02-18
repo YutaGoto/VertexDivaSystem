@@ -17,6 +17,16 @@ Difficulty.create(
 # 4: Extream
 # 5: ExExtream
 
+# マスターデータ
+Vocalist.destroy_all
+Vocalist.create(
+  [
+    {name: "初音ミク"},
+    {name: "鏡音リン"},
+    {name: "鏡音レン"}
+  ]
+)
+
 # 曲データ
 
 Song.destroy_all
@@ -25,7 +35,8 @@ Song.create(
     {
       title: "あいうえお",
       release_date: "2015-12-12",
-      difficulty_ids: [1,2,3,4,5]
+      difficulty_ids: [1,2,3,4,5],
+      vocalist_ids: [1,2]
     }
   ]
 )
