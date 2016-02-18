@@ -17,7 +17,7 @@ Difficulty.create(
 # 4: Extream
 # 5: ExExtream
 
-# マスターデータ
+# ボカロ
 Vocalist.destroy_all
 Vocalist.create(
   [

@@ -38,9 +38,17 @@ gem 'rails_12factor'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'pry'
-
-  gem 'rubocop'
+  gem 'pry-rails'
+  gem 'pry-doc'
+  gem 'pry-stack_explorer'
+  gem 'pry-byebug'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'hirb'
+  gem 'hirb-unicode'
+  gem 'awesome_print'
+  gem 'xray-rails'
+  gem 'rack-mini-profiler'
   gem 'puma'
 end
 
