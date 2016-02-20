@@ -4,26 +4,29 @@ Difficulty.create(
   [
     {name: "Easy"},
     {name: "Normal"},
-    {name: "Difficult"},
-    {name: "Extream"},
-    {name: "ExExtream"}
+    {name: "Hard"},
+    {name: "Extreme"},
+    {name: "ExExtreme"}
   ]
 )
 
 # difficulty_ids
 # 1: Easy
 # 2: Normal
-# 3: Difficult
-# 4: Extream
-# 5: ExExtream
+# 3: Hard
+# 4: Extreme
+# 5: ExExtreme
 
 # ボカロ
 Vocalist.destroy_all
 Vocalist.create(
   [
-    {name: "初音ミク"},
-    {name: "鏡音リン"},
-    {name: "鏡音レン"}
+    {id: 1, name: "初音ミク"},
+    {id: 2, name: "鏡音リン"},
+    {id: 3, name: "鏡音レン"},
+    {id: 4, name: "巡音ルカ"},
+    {id: 5, name: "KAITO"},
+    {id: 6, name: "MEIKO"}
   ]
 )
 
