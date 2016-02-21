@@ -1,5 +1,4 @@
 class SongsController < ApplicationController
-
   def new
     @song = Song.new
   end
@@ -48,5 +47,4 @@ class SongsController < ApplicationController
       vocalist_ids: []
     )
   end
-
 end
