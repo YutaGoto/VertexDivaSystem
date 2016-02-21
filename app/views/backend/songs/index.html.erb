@@ -9,9 +9,9 @@
       <tr>
         <td><%= song.id %></td>
         <td><%= song.title %></td>
-        <td><%= link_to "show", song_path(song.id) %></td>
+        <td><%= link_to "show", backend_song_path(song.id) %></td>
       </tr>
     <% end %>
   </table>
-  <%= link_to "new", new_song_path %>
+  <%= link_to "new", new_backend_song_path %>
 </div>

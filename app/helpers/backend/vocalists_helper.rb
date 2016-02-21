@@ -1,0 +1,2 @@
+module Backend::VocalistsHelper
+end

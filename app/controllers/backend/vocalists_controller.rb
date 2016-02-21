@@ -1,4 +1,4 @@
-class VocalistsController < ApplicationController
+class Backend::VocalistsController < ApplicationController
   def new
     @vocalist = Vocalist.new
   end
@@ -6,7 +6,7 @@ class VocalistsController < ApplicationController
   def create
     @vocalist = Vocalist.new(vocalist_params)
     if @vocalist.save!
-      redirect_to vocalist_path @vocalist.id
+      redirect_to backend_vocalist_path @vocalist.id
     else
       render :new
     end
@@ -27,7 +27,7 @@ class VocalistsController < ApplicationController
   def update
     @vocalist = Vocalist.find(params[:id])
     if @vocalist.update(vocalist_params)
-      redirect_to vocalist_path @vocalist.id
+      redirect_to backend_vocalist_path @vocalist.id
     else
       render :new
     end
