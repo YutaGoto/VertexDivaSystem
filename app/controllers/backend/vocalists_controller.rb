@@ -5,7 +5,7 @@ class Backend::VocalistsController < ApplicationController
 
   def create
     @vocalist = Vocalist.new(vocalist_params)
-    if @vocalist.save!
+    if @vocalist.save
       redirect_to backend_vocalist_path @vocalist.id
     else
       render :new
