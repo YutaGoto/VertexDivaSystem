@@ -31,7 +31,7 @@
           checked="checked"
           <% end %>
       >
-      <%= vocalist.name %>
+      <%= link_to vocalist.name, backend_vocalist_path(vocalist.id) %>
     </label>
   <% end %>
 </p>

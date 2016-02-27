@@ -18,6 +18,7 @@ class Backend::VocalistsController < ApplicationController
 
   def show
     @vocalist = Vocalist.find(params[:id])
+    @songs = Song.by_vocalist(@vocalist.id)
   end
 
   def edit
