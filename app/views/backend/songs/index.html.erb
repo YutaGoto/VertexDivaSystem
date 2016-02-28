@@ -1,5 +1,5 @@
-<div>
-  <table>
+<div class="container-fluid">
+  <table class="table table-bordered">
     <tr>
       <th>ID</th>
       <th>曲名</th>
@@ -9,9 +9,9 @@
       <tr>
         <td><%= song.id %></td>
         <td><%= song.title %></td>
-        <td><%= link_to "show", backend_song_path(song.id) %></td>
+        <td><%= link_to :show, backend_song_path(song.id), class: 'btn btn-warning btn-xs' %></td>
       </tr>
     <% end %>
   </table>
-  <%= link_to "new", new_backend_song_path %>
+  <%= link_to '新規登録', new_backend_song_path, class: 'btn btn-info' %>
 </div>

@@ -1,34 +1,36 @@
-<div>
-  <p>
-    曲名
-    <%= @song.title %>
-  </p>
-</div>
+<div class="container-fluid">
+  <div>
+    <p>
+      曲名
+      <%= @song.title %>
+    </p>
+  </div>
 
-<div>
-  <p>
-    リリース日
-    <%= @song.release_date %>
-  </p>
-</div>
+  <div>
+    <p>
+      リリース日
+      <%= @song.release_date %>
+    </p>
+  </div>
 
-<div>
-  <p>難易度</p>
-  <% if @song.try(:difficulties).present? %>
-    <% @song.difficulties.each do |d| %>
-      <%= d.name %>
+  <div>
+    <p>難易度</p>
+    <% if @song.try(:difficulties).present? %>
+      <% @song.difficulties.each do |d| %>
+        <%= d.name %>
+      <% end %>
     <% end %>
-  <% end %>
-</div>
+  </div>
 
-<div>
-  <p>ボーカル</p>
-  <% if @song.try(:vocalists).present? %>
-    <% @song.vocalists.each do |v| %>
-      <%= v.name %>
+  <div>
+    <p>ボーカル</p>
+    <% if @song.try(:vocalists).present? %>
+      <% @song.vocalists.each do |v| %>
+        <%= v.name %>
+      <% end %>
     <% end %>
-  <% end %>
-</div>
+  </div>
 
-<%= link_to "edit", edit_backend_song_path(@song.id) %>
-<%= link_to "index", backend_songs_path %>
+  <%= link_to "edit", edit_backend_song_path(@song.id) %>
+  <%= link_to "index", backend_songs_path %>
+</div>

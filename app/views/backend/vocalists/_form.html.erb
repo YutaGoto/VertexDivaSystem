@@ -1,8 +1,8 @@
-<p>
-  <%= f.label 'ボカロ名' %>
-  <%= f.text_field :name %>
-</p>
+<div>
+  <%= @vocalist.try(:id) %>
+</div>
 
-<p>
-  <%= f.submit %>
-</p>
+<div class="form-group">
+  <%= f.label 'ボカロ名' %>
+  <%= f.text_field :name, class: 'form-control' %>
+</div>

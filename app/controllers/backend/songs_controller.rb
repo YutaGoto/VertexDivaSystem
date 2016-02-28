@@ -1,4 +1,6 @@
 class Backend::SongsController < ApplicationController
+  before_action :header_vocalists
+
   def new
     @song = Song.new
   end
@@ -42,6 +44,7 @@ class Backend::SongsController < ApplicationController
   def song_params
     params.require(:song).permit(
       :title,
+      :title_kana,
       :release_date,
       difficulty_ids: [],
       vocalist_ids: []

@@ -1,4 +1,6 @@
 class Backend::VocalistsController < ApplicationController
+  before_action :header_vocalists
+
   def new
     @vocalist = Vocalist.new
   end
