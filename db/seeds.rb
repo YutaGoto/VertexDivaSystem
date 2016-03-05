@@ -30,16 +30,16 @@ Song.create(
     {
       title: "ワールドイズマイン",
       title_kana: "わーるどいずまいん",
-      release_date: "2010-06-23",
-      difficulty_ids: [1,2,3,4,5],
+      release_date: '2010-06-23',
+      difficulty_ids: [1, 2, 3, 4, 5],
       vocalist_ids: [1]
     },
     {
       title: "曲名",
       title_kana: "きょくめい",
-      release_date: "2015-12-12",
-      difficulty_ids: [1,2,3,4,5],
-      vocalist_ids: [1,2]
+      release_date: '2015-12-12',
+      difficulty_ids: [1, 2, 3, 4, 5],
+      vocalist_ids: [1, 2]
     }
     ## どんどん追加する
   ]

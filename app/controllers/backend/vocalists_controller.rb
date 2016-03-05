@@ -1,4 +1,4 @@
-class Backend::VocalistsController < ApplicationController
+class Backend::VocalistsController < Backend::ApplicationController
   before_action :header_vocalists
 
   def new

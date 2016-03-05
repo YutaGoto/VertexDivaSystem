@@ -143,8 +143,6 @@ GEM
     rake (10.5.0)
     rdoc (4.2.1)
       json (~> 1.4)
-    ridgepole (0.6.4)
-      activerecord (~> 4.2.1)
     rubocop (0.36.0)
       parser (>= 2.3.0.0, < 3.0)
       powerpack (~> 0.1)
@@ -213,7 +211,6 @@ DEPENDENCIES
   rack-mini-profiler
   rails (= 4.2.5)
   rails_12factor
-  ridgepole (>= 0.6.0)
   rubocop
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)

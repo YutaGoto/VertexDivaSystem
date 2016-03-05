@@ -15,6 +15,14 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <li><%= link_to '曲一覧',backend_songs_path %></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">ぼかろ <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <% @vocalists.each do |vocalist| %>
+                  <li><%= link_to vocalist.name, backend_vocalist_path(vocalist.id) %></li>
+                <% end %>
+              </ul>
+            </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">ログイン</a></li>
