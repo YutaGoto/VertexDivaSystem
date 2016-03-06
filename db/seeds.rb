@@ -10,6 +10,19 @@ Difficulty.create(
   ]
 )
 
+# admin
+Admin.destroy_all
+Admin.create(
+  [
+    {
+      name: '.ごっち',
+      email: 'test@miku.com',
+      password: 'test1234',
+      twitter_id: 'gggooottto'
+    }
+  ]
+)
+
 # ボカロ
 Vocalist.destroy_all
 Vocalist.create(

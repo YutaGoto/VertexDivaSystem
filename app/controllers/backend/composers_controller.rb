@@ -1,5 +1,6 @@
 class Backend::ComposersController < Backend::ApplicationController
   before_action :header_vocalists
+  before_action :check_login
 
   def new
     @composer = Composer.new

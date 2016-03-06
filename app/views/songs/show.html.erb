@@ -1,0 +1,40 @@
+<div>
+  <p>
+    曲名
+    <%= @song.title %>
+  </p>
+</div>
+
+<div>
+  <p>
+    リリース日
+    <%= @song.release_date %>
+  </p>
+</div>
+
+<div>
+  <p>難易度</p>
+  <% if @song.try(:difficulties).present? %>
+    <% @song.difficulties.each do |d| %>
+      <%= d.name %>
+    <% end %>
+  <% end %>
+</div>
+
+<div>
+  <p>ボーカル</p>
+  <% if @song.try(:vocalists).present? %>
+    <% @song.vocalists.each do |v| %>
+      <%= v.name %>
+    <% end %>
+  <% end %>
+</div>
+
+<div>
+  <p>P</p>
+  <% if @song.try(:composer).present? %>
+    <%= @song.composer.name %>
+  <% end %>
+</div>
+
+<%= link_to "index", songs_path %>

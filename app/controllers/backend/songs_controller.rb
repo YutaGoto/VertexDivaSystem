@@ -1,5 +1,6 @@
 class Backend::SongsController < Backend::ApplicationController
   before_action :header_vocalists
+  before_action :check_login
 
   def new
     @song = Song.new
