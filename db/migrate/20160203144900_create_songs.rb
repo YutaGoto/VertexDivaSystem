@@ -4,6 +4,7 @@ class CreateSongs < ActiveRecord::Migration
       t.string      'title'
       t.string      'title_kana'
       t.datetime    'release_date'
+      t.integer     'composer_id'
 
       t.timestamps  null: false
     end

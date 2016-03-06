@@ -46,6 +46,7 @@ class Backend::SongsController < Backend::ApplicationController
       :title,
       :title_kana,
       :release_date,
+      :composer_id,
       difficulty_ids: [],
       vocalist_ids: []
     )

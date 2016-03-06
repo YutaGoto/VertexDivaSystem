@@ -1,5 +1,5 @@
 <p>新規登録</p>
-<%= form_for :vocalist, url: backend_vocalists_path, html: {class: "pure-form"} do |f| %>
+<%= form_for :composer, url: backend_composers_path, html: {class: "pure-form"} do |f| %>
   <%= render 'form', f: f %>
   <%= f.submit class: "pure-button pure-button-primary" %>
 <% end %>
