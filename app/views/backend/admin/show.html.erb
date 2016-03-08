@@ -1,0 +1,16 @@
+<div>
+  <p>
+    なまえ
+    <%= @admin.name %>
+  </p>
+</div>
+
+<div>
+  <p>
+    メール
+    <%= @admin.email %>
+  </p>
+</div>
+
+<%= link_to "edit", edit_backend_admin_path(@admin.id) %>
+<%= link_to "index", backend_admin_path %>

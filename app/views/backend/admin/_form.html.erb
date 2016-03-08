@@ -1,0 +1,38 @@
+<div>
+  <%= @admin.try(:id) %>
+</div>
+
+<div class="pure-u-1 pure-u-lg-1-6">
+  <%= f.label 'おなまえ' %>
+</div>
+<div class="pure-u-1 pure-u-lg-5-6">
+  <%= f.text_field :name, class: 'form-control' %>
+</div>
+
+<div class="pure-u-1 pure-u-lg-1-6">
+  <%= f.label 'email' %>
+</div>
+<div class="pure-u-1 pure-u-lg-5-6">
+  <%= f.text_field :email, class: 'form-control' %>
+</div>
+
+<div class="pure-u-1 pure-u-lg-1-6">
+  <%= f.label 'password' %>
+</div>
+<div class="pure-u-1 pure-u-lg-5-6">
+  <%= f.password_field :password, class: 'form-control' %>
+</div>
+
+<div class="pure-u-1 pure-u-lg-1-6">
+  <%= f.label 'password_confirmation' %>
+</div>
+<div class="pure-u-1 pure-u-lg-5-6">
+  <%= f.password_field :password_confirmation, class: 'form-control' %>
+</div>
+
+<div class="pure-u-1 pure-u-lg-1-6">
+  <%= f.label 'twitter_id' %>
+</div>
+<div class="pure-u-1 pure-u-lg-5-6">
+  <%= f.text_field :twitter_id, class: 'form-control' %>
+</div>

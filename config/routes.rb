@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :songs, only: [:index, :show]
 
   namespace :backend do
+    resources :admin
     resources :songs
     resources :vocalists
     resources :composers
