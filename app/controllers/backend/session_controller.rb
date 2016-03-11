@@ -1,8 +1,6 @@
 class Backend::SessionController < Backend::ApplicationController
   def sign_in
-    if session[:id]
-      redirect_to backend_top_path
-    end
+    redirect_to backend_top_path if session[:id]
     if params.key?(:email) || params.key?(:password)
       admin = Admin.find_by email: params[:email]
       if admin && admin.authenticate(params[:password])

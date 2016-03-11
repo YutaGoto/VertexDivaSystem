@@ -50,22 +50,22 @@ Song.create(
     {
       title: "星屑ユートピア",
       title_kana: "ほしくずゆーとぴあ",
-      release_date: "2010-06-23",
-      difficulty_ids: [1,2,3,4,5],
+      release_date: '2010-06-23',
+      difficulty_ids: [1, 2, 3, 4, 5],
       vocalist_ids: [4]
     },
     {
       title: "なりすましゲンガー",
       title_kana: "なりすましげんがー",
-      release_date: "2016-1-28",
-      difficulty_ids: [1,2,3,4],
-      vocalist_ids: [1,2]
+      release_date: '2016-1-28',
+      difficulty_ids: [1, 2, 3, 4],
+      vocalist_ids: [1, 2]
     },
     {
       title: "アゲアゲアゲイン",
       title_kana: "あげあげあげいん",
-      release_date: "2016-2-26",
-      difficulty_ids: [1,2,3,4],
+      release_date: '2016-2-26',
+      difficulty_ids: [1, 2, 3, 4],
       vocalist_ids: [1]
     }
   ]
