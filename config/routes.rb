@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
   root 'welcome#index'
 
-  get :thanks, controller: :welcome, action: :thanks
+  get :new, controller: :participants, action: :new
+  get :thanks, controller: :participants, action: :thanks
+
+  get :about, controller: :welcome, action: :about
+
   resources :songs, only: [:index, :show]
 
   namespace :backend do
