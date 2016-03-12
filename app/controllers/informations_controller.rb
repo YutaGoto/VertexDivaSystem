@@ -4,6 +4,6 @@ class InformationsController < ApplicationController
   end
 
   def show
-    @information = Information.find_by params[:id]
+    @information = Information.find_by(id: params[:id])
   end
 end
