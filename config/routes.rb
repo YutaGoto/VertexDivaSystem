@@ -7,9 +7,11 @@ Rails.application.routes.draw do
   get :about, controller: :welcome, action: :about
 
   resources :songs, only: [:index, :show]
+  resources :informations, only: [:index, :show]
 
   namespace :backend do
     resources :admin
+    resources :informations
     resources :songs
     resources :vocalists
     resources :composers

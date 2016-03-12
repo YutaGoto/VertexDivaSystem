@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_160_306_145_939) do
+ActiveRecord::Schema.define(version: 20_160_312_064_442) do
   # These are extensions that must be enabled in order to support this database
   enable_extension 'plpgsql'
 
@@ -45,6 +45,15 @@ ActiveRecord::Schema.define(version: 20_160_306_145_939) do
 
   add_index 'difficulty_songs', ['difficulty_id'], name: 'index_difficulty_songs_on_difficulty_id', using: :btree
   add_index 'difficulty_songs', ['song_id'], name: 'index_difficulty_songs_on_song_id', using: :btree
+
+  create_table 'information', force: :cascade do |t|
+    t.string   'title'
+    t.text     'body'
+    t.datetime 'publish_date'
+    t.boolean  'draft'
+    t.datetime 'created_at',   null: false
+    t.datetime 'updated_at',   null: false
+  end
 
   create_table 'songs', force: :cascade do |t|
     t.string   'title'

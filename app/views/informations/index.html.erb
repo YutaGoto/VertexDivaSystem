@@ -1,0 +1,18 @@
+<table>
+  <tr>
+    <th>ID</th>
+    <th>title</th>
+    <th>publish_date</th>
+    <th>draft</th>
+    <th></th>
+  </tr>
+  <% @informations.each do |information| %>
+    <tr>
+      <td><%= information.id %></td>
+      <td><%= information.title %></td>
+      <td><%= information.publish_date %></td>
+      <td><%= information.draft %></td>
+      <td><%= link_to "show", information_path(information.id) %></td>
+    </tr>
+  <% end %>
+</table>

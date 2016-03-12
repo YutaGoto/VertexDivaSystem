@@ -31,11 +31,11 @@ class Backend::AdminController < Backend::ApplicationController
     if @admin.update!(admin_params)
       redirect_to backend_admin_path @admin.id
     else
-      render :new
+      render :edit
     end
   end
 
-  def destloy
+  def destroy
     @admin = Admin.find(params[:id])
   end
 
