@@ -3,3 +3,20 @@
 <%= link_to '参加登録', new_path %>
 <%= link_to 'VerTexDivaとは', about_path %>
 <%= link_to 'ニュース', informations_path %>
+
+<h2>ニュース</h2>
+<div class="posts">
+  <% @informations.each do |information| %>
+    <section class="post">
+      <div class="post-header">
+        <h2 class="post-title"><%= information.title %></h2>
+        <p class="post-meta"><%= information.publish_date %></p>
+      </div>
+      <div class="post-description">
+        <%= simple_format information.body[0..60] %>
+      </div>
+      <%= link_to "続きを見る", information_path(information.id) %>
+    </section>
+  <%= link_to "show", information_path(information.id) %>
+  <% end %>
+</div>
