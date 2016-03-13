@@ -1,8 +1,5 @@
-<h1>VerTexDiva 公式サイト</h1>
-
 <%= link_to '参加登録', new_path %>
 <%= link_to 'VerTexDivaとは', about_path %>
-<%= link_to 'ニュース', informations_path %>
 
 <h2>ニュース</h2>
 <div class="posts">
@@ -14,9 +11,8 @@
       </div>
       <div class="post-description">
         <%= simple_format information.body[0..60] %>
+        <%= link_to "続きを見る", information_path(information.id) %>
       </div>
-      <%= link_to "続きを見る", information_path(information.id) %>
     </section>
-  <%= link_to "show", information_path(information.id) %>
   <% end %>
 </div>

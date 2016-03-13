@@ -7,9 +7,9 @@
         <p class="post-meta"><%= information.publish_date %></p>
       </div>
       <div class="post-description">
-        <%= strip_tags information.body[0..60] %>
+        <%= simple_format information.body[0..60] %>
+        <%= link_to "続きを見る", information_path(information.id) %>
       </div>
-      <%= link_to "続きを見る", information_path(information.id) %>
     </section>
   <% end %>
 </div>
