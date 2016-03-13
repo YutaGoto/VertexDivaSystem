@@ -1,0 +1,13 @@
+<div class="posts">
+  <section class="post">
+    <div class="post-header">
+      <h2 class="post-title"><%= @information.title %></h2>
+      <p class="post-meta"><%= @information.publish_date %></p>
+    </div>
+    <div class="post-description">
+      <%= simple_format @information.body %>
+    </div>
+  </section>
+</div>
+
+<%= link_to "index", informations_path %>

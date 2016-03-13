@@ -1,17 +1,14 @@
-<div>
-  <table>
+<table class="table table-bordered">
+  <tr>
+    <th>ID</th>
+    <th>曲名</th>
+    <th></th>
+  </tr>
+  <% @songs.each do |song| %>
     <tr>
-      <th>ID</th>
-      <th>曲名</th>
-      <th></th>
+      <td><%= song.id %></td>
+      <td><%= song.title %></td>
+      <td><%= link_to :show, song_path(song.id), class: 'btn btn-warning btn-xs' %></td>
     </tr>
-    <% @songs.each do |song| %>
-      <tr>
-        <td><%= song.id %></td>
-        <td><%= song.title %></td>
-        <td><%= link_to "show", song_path(song.id) %></td>
-      </tr>
-    <% end %>
-  </table>
-  <%= link_to "new", new_song_path %>
-</div>
+  <% end %>
+</table>

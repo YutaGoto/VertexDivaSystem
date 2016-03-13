@@ -1,0 +1,15 @@
+<table>
+  <tr>
+    <th>ID</th>
+    <th>P名</th>
+    <th></th>
+  </tr>
+  <% @composers.each do |composer| %>
+    <tr>
+      <td><%= composer.id %></td>
+      <td><%= composer.name %></td>
+      <td><%= link_to "show", backend_composer_path(composer.id) %></td>
+    </tr>
+  <% end %>
+</table>
+<%= link_to "new", new_backend_composer_path %>

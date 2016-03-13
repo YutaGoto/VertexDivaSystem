@@ -1,0 +1,30 @@
+<div>
+  <p>
+    タイトル
+    <%= @information.title %>
+  </p>
+</div>
+
+<div>
+  <p>
+    本文
+    <%= @information.body %>
+  </p>
+</div>
+
+<div>
+  <p>
+    公開日
+    <%= @information.publish_date %>
+  </p>
+</div>
+
+<div>
+  <p>
+    下書き
+    <%= @information.draft %>
+  </p>
+</div>
+
+<%= link_to "index", backend_informations_path %>
+<%= link_to "edit", edit_backend_information_path(@information.id) %>

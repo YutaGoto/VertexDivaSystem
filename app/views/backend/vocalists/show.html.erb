@@ -1,0 +1,15 @@
+<div>
+  <p>
+    ボカロ名
+    <%= @vocalist.name %>
+  </p>
+</div>
+
+<div>
+  <% @songs.each do |song| %>
+    <p><%= link_to song.title, backend_song_path(song.id) %></p>
+  <% end %>
+</div>
+
+<%= link_to "edit", edit_backend_vocalist_path(@vocalist.id) %>
+<%= link_to "index", backend_vocalists_path %>

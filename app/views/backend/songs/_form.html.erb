@@ -1,0 +1,57 @@
+<div>
+  <%= @song.try(:id) %>
+</div>
+
+<div class="pure-u-1 pure-u-lg-1-6">
+  <%= f.label '曲名' %>
+</div>
+<div class="pure-u-1 pure-u-lg-5-6">
+  <%= f.text_field :title, class: 'form-control' %>
+</div>
+
+<div class="pure-u-1 pure-u-lg-1-6">
+  <%= f.label '曲名かな' %>
+</div>
+<div class="pure-u-1 pure-u-lg-5-6">
+  <%= f.text_field :title_kana, class: 'form-control' %>
+</div>
+
+<div class="pure-u-1 pure-u-lg-1-6">
+  <%= f.label '公開日' %>
+</div>
+<div class="pure-u-1 pure-u-lg-5-6">
+  <%= f.date_select :release_date, class: 'form-control' %>
+</div>
+
+<div class="pure-u-1 pure-u-lg-1-6">
+  <%= f.label '難易度' %>
+</div>
+<div class="pure-u-1 pure-u-lg-5-6">
+  <% Difficulty.all.each do |difficulty| %>
+    <label class="pure-checkbox">
+      <input value="<%= difficulty.id %>" name="song[difficulty_ids][]" type="checkbox"
+        <% if DifficultySong.where(song_id: params[:id]).pluck(:difficulty_id).include?(difficulty.id) %>
+          checked="checked"
+          <% end %>
+      >
+      <%= difficulty.name %>
+    </label>
+  <% end %>
+</div>
+
+
+<div class="pure-u-1 pure-u-lg-1-6">
+  <%= f.label 'ボーカル' %>
+</div>
+<div class="pure-u-1 pure-u-lg-5-6">
+  <% Vocalist.all.each do |vocalist| %>
+    <label class="pure-checkbox">
+      <input value="<%= vocalist.id %>" name="song[vocalist_ids][]" type="checkbox"
+        <% if VocalistSong.where(song_id: params[:id]).pluck(:vocalist_id).include?(vocalist.id) %>
+          checked="checked"
+          <% end %>
+      >
+      <%= vocalist.name %>
+    </label>
+  <% end %>
+</div>
