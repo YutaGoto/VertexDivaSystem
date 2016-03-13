@@ -160,7 +160,7 @@ $ bin/rspec
 ```
 
 ## 開発の進め方、注意
-[ここ](doc/development.md)
+[ここ](development.md)
 
 
 
