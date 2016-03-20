@@ -1,15 +1,17 @@
-<h1>ニュース</h1>
-<div class="posts">
-  <% @informations.each do |information| %>
-    <section class="post">
-      <div class="post-header">
-        <h2 class="post-title"><%= information.title %></h2>
-        <p class="post-meta"><%= information.publish_date %></p>
-      </div>
-      <div class="post-description">
-        <%= simple_format information.body[0..60] %>
-        <%= link_to "続きを見る", information_path(information.id) %>
-      </div>
-    </section>
-  <% end %>
+<div class="news">
+  <h1>ニュース</h1>
+  <div class="posts">
+    <% @informations.each do |information| %>
+      <section class="post">
+        <div class="post-header">
+          <h2 class="post-title"><%= information.title %></h2>
+          <p class="post-meta"><%= information.publish_date %></p>
+        </div>
+        <div class="post-description">
+          <%= simple_format information.body[0..60] %>
+          <%= link_to "続きを見る", information_path(information.id) %>
+        </div>
+      </section>
+    <% end %>
+  </div>
 </div>

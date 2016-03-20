@@ -39,7 +39,7 @@ h3 {
 .header {
     text-align: center;
     top: auto;
-    margin: 3em auto;
+    margin: 1em auto;
 }
 
 .header-logo{
@@ -100,7 +100,7 @@ h3 {
 }
 
 .content {
-    padding: 2em 3em 0;
+  padding: 1em 0;
 }
 
 .content-header {
@@ -118,6 +118,15 @@ h3 {
 .footer .pure-menu a:hover,
 .footer .pure-menu a:focus {
     background: none;
+}
+
+.t-center{
+  text-align: center;
+}
+
+.news{
+  background-color: #b2f4df;
+  padding: 10px;
 }
 
 @media (min-width: 64em) {

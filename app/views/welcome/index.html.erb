@@ -1,18 +1,33 @@
-<%= link_to '参加登録', new_path %>
-<%= link_to 'VerTexDivaとは', about_path %>
+<div class="menu pure-g">
+  <div class="pure-u-1-2 pure-u-lg-1-4 t-center">
+    <%= link_to image_tag("/images/news.png", class: 'pure-img'), informations_path %>
+  </div>
+  <div class="pure-u-1-2 pure-u-lg-1-4 t-center">
+    <%= link_to image_tag("/images/schedule.png", class: 'pure-img'), about_path %>
+  </div>
+  <div class="pure-u-1-2 pure-u-lg-1-4 t-center">
+    <%= link_to image_tag("/images/rule.png", class: 'pure-img'), about_path %>
+  </div>
+  <div class="pure-u-1-2 pure-u-lg-1-4 t-center">
+    <%= link_to image_tag("/images/entry.png", class: 'pure-img'), new_path %>
+  </div>
+</div>
 
-<h2>ニュース</h2>
-<div class="posts">
-  <% @informations.each do |information| %>
-    <section class="post">
-      <div class="post-header">
-        <h2 class="post-title"><%= information.title %></h2>
-        <p class="post-meta"><%= information.publish_date %></p>
-      </div>
-      <div class="post-description">
-        <%= simple_format information.body[0..60] %>
-        <%= link_to "続きを見る", information_path(information.id) %>
-      </div>
-    </section>
-  <% end %>
+
+<div class="news">
+  <h2>ニュース</h2>
+  <div class="posts">
+    <% @informations.each do |information| %>
+      <section class="post">
+        <div class="post-header">
+          <h2 class="post-title"><%= information.title %></h2>
+          <p class="post-meta"><%= information.publish_date.strftime('%Y年%m月%d日') %></p>
+        </div>
+        <div class="post-description">
+          <%= simple_format information.body[0..60] %>
+          <%= link_to "続きを見る", information_path(information.id) %>
+        </div>
+      </section>
+    <% end %>
+  </div>
 </div>
