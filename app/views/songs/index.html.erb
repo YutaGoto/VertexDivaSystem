@@ -1,14 +1,21 @@
-<table class="table table-bordered">
-  <tr>
-    <th>ID</th>
-    <th>曲名</th>
-    <th></th>
-  </tr>
-  <% @songs.each do |song| %>
-    <tr>
-      <td><%= song.id %></td>
-      <td><%= song.title %></td>
-      <td><%= link_to :show, song_path(song.id), class: 'btn btn-warning btn-xs' %></td>
-    </tr>
-  <% end %>
-</table>
+<div class="contents ml_10">
+  <h1>収録曲一覧</h1>
+  <table class="pure-table pure-table-bordered">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>曲名</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @songs.each do |song| %>
+        <tr>
+          <td><%= song.id %></td>
+          <td><%= song.title %></td>
+          <td><%= link_to "詳しく見る", song_path(song.id), class: 'pure-button pure-button-primary pure-button-xsmall' %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
