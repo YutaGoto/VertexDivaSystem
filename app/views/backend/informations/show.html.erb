@@ -2,12 +2,12 @@
   <section class="post">
     <div class="post-header">
       <h2 class="post-title"><%= @information.title %></h2>
-      <p class="post-meta"><%= @information.publish_date %></p>
+      <p class="post-meta"><%= @information.publish_date.strftime('%Y年%m月%d日') %></p>
     </div>
     <div class="post-description">
       <%= simple_format @information.body %>
     </div>
   </section>
 </div>
-<%= link_to "index", backend_informations_path %>
-<%= link_to "edit", edit_backend_information_path(@information.id) %>
+<%= link_to "ニュース一覧に戻る", backend_informations_path %>
+<%= link_to "編集", edit_backend_information_path(@information.id) %>
