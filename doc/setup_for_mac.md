@@ -101,7 +101,7 @@ postgresを上記通りに設定してあれば
 
 ## DB作成
 
-```sql
+```sh
 $ bin/rake db:create
 ```
 

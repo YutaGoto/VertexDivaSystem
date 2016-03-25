@@ -3,8 +3,8 @@
 
 システム自体は*Ruby on Rails*というフレームワークを使用しています。
 
-* ruby :  'ver.2.2.1'
-* Ruby on Rails :  '4.2.5'
+* ruby : '2.2.1'
+* Ruby on Rails : '4.2.5'
 
 [Macでの環境構築方法](doc/setup_for_mac.md)
 
