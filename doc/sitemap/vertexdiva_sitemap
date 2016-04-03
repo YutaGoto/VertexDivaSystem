@@ -1,0 +1,42 @@
+[トップ]
+/
+---
+about
+==> VerTexDivaについて
+new
+==> 大会参加登録
+rule
+==> 大会ルール
+informations
+==> ニュース
+
+[大会参加登録]
+プレイヤー登録
+---
+thanks
+==> 完了ページ
+
+[ニュース]
+infomations/:id
+==> ニュース本文
+
+
+[運営ログイン]
+backend
+==> 運営トップ
+
+[運営トップ]
+/backend/
+---
+songs
+==> 曲管理
+vocalists
+==> ボカロ管理
+composers
+==> 作曲者管理
+informations
+==> ニュース管理
+admins
+==> 運営メンバー管理
+
+
