@@ -11,7 +11,6 @@ Admin.create(
   ]
 )
 
-# マスターデータ
 Difficulty.destroy_all
 Difficulty.create(
   [
@@ -23,7 +22,6 @@ Difficulty.create(
   ]
 )
 
-# ボカロ
 Vocalist.destroy_all
 Vocalist.create(
   [
@@ -183,7 +181,6 @@ Composer.create(
   ]
 )
 
-# 曲データ
 Song.destroy_all
 Song.create(
   [

@@ -8,18 +8,27 @@
 
 # Offense count: 1
 Metrics/AbcSize:
-  Max: 30
+  Max: 45
+
+Metrics/CyclomaticComplexity:
+  Max: 20
 
 # Offense count: 28
 # Configuration parameters: AllowHeredoc, AllowURI, URISchemes.
 # URISchemes: http, https
 Metrics/LineLength:
-  Max: 130
+  Max: 150
 
 # Offense count: 1
 # Configuration parameters: CountComments.
 Metrics/MethodLength:
-  Max: 15
+  Max: 20
+
+Metrics/ClassLength:
+  Max: 200
+
+Metrics/PerceivedComplexity:
+  Max: 18
 
 # Offense count: 4
 Style/AsciiComments:
@@ -36,3 +45,24 @@ Style/ClassAndModuleChildren:
 # Offense count: 35
 Style/Documentation:
   Enabled: false
+
+
+AllCops:
+  RunRailsCops: true
+  Exclude:
+    - 'bin/**/*'
+    - 'config/**/*'
+    - 'db/**/*'
+    - 'script/**/*'
+    - 'vendor/bundle/**/*'
+    - 'Gemfile'
+    - 'Rakefile'
+
+Lint/UnusedBlockArgument:
+  Enabled: false
+
+Lint/UnusedMethodArgument:
+  Enabled: false
+
+Style/SpaceInsideHashLiteralBraces:
+  EnforcedStyle: no_space
