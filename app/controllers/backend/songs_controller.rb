@@ -39,7 +39,7 @@ class Backend::SongsController < Backend::ApplicationController
     @song = Song.find(params[:id])
   end
 
-  def to_cs
+  def to_csv
     csv_data = CSV.generate do |csv|
       csv << [
         'ID',
