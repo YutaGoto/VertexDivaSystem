@@ -14,7 +14,9 @@ Rails.application.routes.draw do
   namespace :backend do
     resources :admin
     resources :informations
-    resources :songs
+    resources :songs do
+      get :to_csv
+    end
     resources :vocalists
     resources :composers
 
