@@ -8,4 +8,12 @@ class Song < ActiveRecord::Base
   belongs_to :composer
 
   scope :by_vocalist, -> (vocalist_id) { joins(:vocalists).where('vocalists.id = ?', vocalist_id) }
+
+  def has_easy?
+    difficulties.find_by(name: 'Easy').present?
+  end
+
+  def has_exextreme?
+    difficulties.find_by(name: 'Exextreme').present?
+  end
 end
