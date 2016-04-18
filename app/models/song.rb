@@ -5,6 +5,8 @@ class Song < ActiveRecord::Base
   has_many :vocalist_songs
   has_many :vocalists, through: :vocalist_songs
 
+  has_one :illustration
+
   belongs_to :composer
 
   scope :by_vocalist, -> (vocalist_id) { joins(:vocalists).where('vocalists.id = ?', vocalist_id) }
