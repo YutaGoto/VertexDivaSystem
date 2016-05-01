@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_160_312_064_442) do
+ActiveRecord::Schema.define(version: 20_160_418_110_536) do
   # These are extensions that must be enabled in order to support this database
   enable_extension 'plpgsql'
 
@@ -46,6 +46,21 @@ ActiveRecord::Schema.define(version: 20_160_312_064_442) do
   add_index 'difficulty_songs', ['difficulty_id'], name: 'index_difficulty_songs_on_difficulty_id', using: :btree
   add_index 'difficulty_songs', ['song_id'], name: 'index_difficulty_songs_on_song_id', using: :btree
 
+  create_table 'illustrations', force: :cascade do |t|
+    t.integer  'song_id'
+    t.binary   'illustration'
+    t.string   'content_type'
+    t.integer  'illustrator_id'
+    t.datetime 'created_at',     null: false
+    t.datetime 'updated_at',     null: false
+  end
+
+  create_table 'illustrators', force: :cascade do |t|
+    t.string   'name'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+  end
+
   create_table 'information', force: :cascade do |t|
     t.string   'title'
     t.text     'body'
@@ -60,8 +75,9 @@ ActiveRecord::Schema.define(version: 20_160_312_064_442) do
     t.string   'title_kana'
     t.datetime 'release_date'
     t.integer  'composer_id'
-    t.datetime 'created_at',   null: false
-    t.datetime 'updated_at',   null: false
+    t.integer  'illustration_id'
+    t.datetime 'created_at',      null: false
+    t.datetime 'updated_at',      null: false
   end
 
   create_table 'vocalist_songs', force: :cascade do |t|

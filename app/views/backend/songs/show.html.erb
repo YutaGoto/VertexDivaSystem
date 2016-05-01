@@ -13,6 +13,12 @@
 </div>
 
 <div>
+  <p>
+    <%= image_tag illustration_backend_illustration_path(@song.illustration) %>
+  </p>
+</div>
+
+<div>
   <p>難易度</p>
   <% if @song.try(:difficulties).present? %>
     <% @song.difficulties.each do |d| %>
