@@ -11,11 +11,11 @@ class Song < ActiveRecord::Base
 
   scope :by_vocalist, -> (vocalist_id) { joins(:vocalists).where('vocalists.id = ?', vocalist_id) }
 
-  def has_easy?
+  def easy?
     difficulties.find_by(name: 'Easy').present?
   end
 
-  def has_exextreme?
+  def exextreme?
     difficulties.find_by(name: 'Exextreme').present?
   end
 end

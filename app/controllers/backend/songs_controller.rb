@@ -43,10 +43,9 @@ class Backend::SongsController < Backend::ApplicationController
 
   def to_csv
     csv_data = CSV.generate do |csv|
-      csv << [
-        'ID',
-        '曲名',
-      ]
+      csv << %w(
+        ID
+        曲名)
       Song.all.each do |song|
         csv << [
           song.id,
