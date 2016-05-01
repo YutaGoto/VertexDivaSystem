@@ -1,0 +1,13 @@
+<table>
+  <tr>
+    <th>ID</th>
+    <th></th>
+  </tr>
+  <% @illustrations.each do |illustration| %>
+    <tr>
+      <td><%= illustration.id %></td>
+      <td><%= link_to "show", backend_illustration_path(illustration.id) %></td>
+    </tr>
+  <% end %>
+</table>
+<%= link_to "new", new_backend_illustration_path %>

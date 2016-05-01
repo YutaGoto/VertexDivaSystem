@@ -1,0 +1,18 @@
+<div>
+  <p>
+    イラストID
+    <%= @illustration.id %>
+  </p>
+</div>
+
+<div>
+  <p>
+    イラストレータ名
+    <%= @illustration.illustrator.name %>
+  </p>
+</div>
+
+<%= image_tag illustration_backend_illustration_path(@illustration) %>
+
+<%= link_to "edit", edit_backend_illustration_path(@illustration.id) %>
+<%= link_to "index", backend_illustrations_path %>

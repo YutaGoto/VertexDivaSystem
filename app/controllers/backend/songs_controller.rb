@@ -3,6 +3,7 @@ class Backend::SongsController < Backend::ApplicationController
 
   def new
     @song = Song.new
+    @composers = Composer.all
   end
 
   def create
@@ -24,6 +25,7 @@ class Backend::SongsController < Backend::ApplicationController
 
   def edit
     @song = Song.find(params[:id])
+    @composers = Composer.all
   end
 
   def update

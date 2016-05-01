@@ -11,6 +11,12 @@ Rails.application.routes.draw do
   resources :songs, only: [:index, :show]
   resources :informations, only: [:index, :show]
 
+  resources :illustrations, only: [] do
+    member do
+      get :illustration
+    end
+  end
+
   namespace :backend do
     resources :admin
     resources :informations
@@ -20,6 +26,11 @@ Rails.application.routes.draw do
     resources :vocalists
     resources :composers
     resources :illustrators
+    resources :illustrations do
+      member do
+        get :illustration
+      end
+    end
 
     get 'top', controller: :top, action: :index
 

@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 20160418110536) do
   create_table "illustrations", force: :cascade do |t|
     t.integer  "song_id"
     t.binary   "illustration"
+    t.string   "content_type"
     t.integer  "illustrator_id"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
