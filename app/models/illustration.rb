@@ -1,4 +1,4 @@
 class Illustration < ActiveRecord::Base
-  belongs_to :song
+  has_one :song
   belongs_to :illustrator
 end
