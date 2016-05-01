@@ -32,7 +32,7 @@ class Backend::ComposersController < Backend::ApplicationController
     if @composer.update_attributes(composer_params)
       redirect_to backend_composer_path @composer.id
     else
-      render :new
+      render :edit
     end
   end
 

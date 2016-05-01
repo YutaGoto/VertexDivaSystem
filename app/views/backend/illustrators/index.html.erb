@@ -1,0 +1,15 @@
+<table>
+  <tr>
+    <th>ID</th>
+    <th>イラストレーター名</th>
+    <th></th>
+  </tr>
+  <% @illustrators.each do |illustrator| %>
+    <tr>
+      <td><%= illustrator.id %></td>
+      <td><%= illustrator.name %></td>
+      <td><%= link_to "show", backend_illustrator_path(illustrator.id) %></td>
+    </tr>
+  <% end %>
+</table>
+<%= link_to "new", new_backend_illustrator_path %>

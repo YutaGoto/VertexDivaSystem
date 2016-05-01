@@ -19,6 +19,7 @@ Rails.application.routes.draw do
     end
     resources :vocalists
     resources :composers
+    resources :illustrators
 
     get 'top', controller: :top, action: :index
 

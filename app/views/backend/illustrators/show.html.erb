@@ -1,0 +1,9 @@
+<div>
+  <p>
+    イラストレータ名
+    <%= @illustrator.name %>
+  </p>
+</div>
+
+<%= link_to "edit", edit_backend_illustrator_path(@illustrator.id) %>
+<%= link_to "index", backend_illustrators_path %>
