@@ -20,7 +20,7 @@ class Backend::ComposersController < Backend::ApplicationController
 
   def show
     @composer = Composer.find(params[:id])
-    @songs = Song.where(@composer.id)
+    @songs = Song.where(composer_id: @composer.id)
   end
 
   def edit
