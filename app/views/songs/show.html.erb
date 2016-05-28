@@ -37,4 +37,10 @@
   <% end %>
 </div>
 
+<div>
+  <% if @song.try(:illustration).present? %>
+    <%= image_tag user_illustration_path(@song.illustration.id) %>
+  <% end %>
+</div>
+
 <%= link_to "index", songs_path %>

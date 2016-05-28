@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   get :about, controller: :welcome, action: :about
 
+  get :user_illustration, controller: :welcome, action: :user_illustration
+
   get :rule, controller: :welcome, action: :rule
 
   resources :songs, only: [:index, :show]
