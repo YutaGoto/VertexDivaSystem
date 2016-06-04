@@ -1,15 +1,23 @@
-<table>
-  <tr>
-    <th>ID</th>
-    <th>P名</th>
-    <th></th>
-  </tr>
-  <% @composers.each do |composer| %>
-    <tr>
-      <td><%= composer.id %></td>
-      <td><%= composer.name %></td>
-      <td><%= link_to "show", backend_composer_path(composer.id) %></td>
-    </tr>
-  <% end %>
-</table>
-<%= link_to "new", new_backend_composer_path %>
+<div class="contents ml_10">
+  <table class="pure-table pure-table-bordered">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>P名</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @composers.each do |composer| %>
+        <tr>
+          <td><%= composer.id %></td>
+          <td><%= composer.name %></td>
+          <td><%= link_to "show", backend_composer_path(composer.id) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <%= link_to "new", new_backend_composer_path %>
+
+</div>

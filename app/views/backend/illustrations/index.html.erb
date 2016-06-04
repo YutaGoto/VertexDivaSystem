@@ -1,13 +1,21 @@
-<table>
-  <tr>
-    <th>ID</th>
-    <th></th>
-  </tr>
-  <% @illustrations.each do |illustration| %>
-    <tr>
-      <td><%= illustration.id %></td>
-      <td><%= link_to "show", backend_illustration_path(illustration.id) %></td>
-    </tr>
-  <% end %>
-</table>
+<div class="contents ml_10">
+  <table class="pure-table pure-table-bordered">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @illustrations.each do |illustration| %>
+        <tr>
+          <td><%= illustration.id %></td>
+          <td><%= link_to "show", backend_illustration_path(illustration.id) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
 <%= link_to "new", new_backend_illustration_path %>
+
+</div>

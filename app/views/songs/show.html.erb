@@ -1,46 +1,38 @@
-<div>
-  <p>
-    曲名
-    <%= @song.title %>
-  </p>
-</div>
-
-<div>
-  <p>
-    リリース日
-    <%= @song.release_date %>
-  </p>
-</div>
-
-<div>
-  <p>難易度</p>
-  <% if @song.try(:difficulties).present? %>
-    <% @song.difficulties.each do |d| %>
-      <%= d.name %>
-    <% end %>
-  <% end %>
-</div>
-
-<div>
-  <p>ボーカル</p>
-  <% if @song.try(:vocalists).present? %>
-    <% @song.vocalists.each do |v| %>
-      <%= v.name %>
-    <% end %>
-  <% end %>
-</div>
-
-<div>
-  <p>P</p>
-  <% if @song.try(:composer).present? %>
-    <%= @song.composer.name %>
-  <% end %>
-</div>
-
-<div>
-  <% if @song.try(:illustration).present? %>
-    <%= image_tag user_illustration_path(@song.illustration.id) %>
-  <% end %>
+<div class="contents ml_10">
+  <table class="pure-table pure-table-bordered">
+   <tbody>
+     <tr>
+       <th>曲名</th>
+       <td><%= @song.title %></td>
+     </tr>
+     <tr>
+       <th>公開日</th>
+       <td><%= @song.release_date.strftime('%Y年%m月%d日') %></td>
+     </tr>
+     <% if @song.try(:difficulties).present? %>
+       <tr>
+         <th>難易度</th>
+         <td>
+           <% @song.difficulties.each do |d| %>
+            <%= d.name %>
+          <% end %>
+         </td>
+       </tr>
+     <% end %>
+     <% if @song.try(:composer).present? %>
+       <tr>
+         <th>P</th>
+         <td><%= @song.composer.name %></td>
+       </tr>
+     <% end %>
+     <% if @song.try(:illustration).present? %>
+       <tr>
+         <th>曲名</th>
+         <td><%= image_tag user_illustration_path(@song.illustration.id) %></td>
+       </tr>
+     <% end %>
+   </tbody>
+  </table>
 </div>
 
 <%= link_to "index", songs_path %>
