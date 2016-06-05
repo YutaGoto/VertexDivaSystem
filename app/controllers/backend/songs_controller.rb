@@ -3,6 +3,7 @@ class Backend::SongsController < Backend::ApplicationController
 
   def new
     @song = Song.new
+    @composers = Composer.all
   end
 
   def create
@@ -24,11 +25,12 @@ class Backend::SongsController < Backend::ApplicationController
 
   def edit
     @song = Song.find(params[:id])
+    @composers = Composer.all
   end
 
   def update
     @song = Song.find(params[:id])
-    if @song.update_attributes(song_params)
+    if @song.update(song_params)
       redirect_to backend_song_path @song.id
     else
       render :new
@@ -39,6 +41,20 @@ class Backend::SongsController < Backend::ApplicationController
     @song = Song.find(params[:id])
   end
 
+  def to_csv
+    csv_data = CSV.generate do |csv|
+      csv << %w(
+        ID
+        曲名)
+      Song.all.each do |song|
+        csv << [
+          song.id,
+          song.name
+        ]
+      end
+    end
+  end
+
   private
 
   def song_params
@@ -47,6 +63,7 @@ class Backend::SongsController < Backend::ApplicationController
       :title_kana,
       :release_date,
       :composer_id,
+      :illustration_id,
       difficulty_ids: [],
       vocalist_ids: []
     )

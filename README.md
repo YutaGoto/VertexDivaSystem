@@ -3,9 +3,9 @@
 
 システム自体は*Ruby on Rails*というフレームワークを使用しています。
 
-* ruby : '2.2.1'
-* Ruby on Rails : '4.2.5'
+* `Ruby: 2.2.1`
+* `Ruby on Rails : 4.2.5`
 
-[Macでの環境構築方法](doc/setup_for_mac.md)
+[環境設定 for MacOS](doc/setup_for_mac.md)
 
-(環境設定 for Windowsは気が向いたら対応します。)
+(環境設定 for Windows, Linuxは気が向いたら対応します。)

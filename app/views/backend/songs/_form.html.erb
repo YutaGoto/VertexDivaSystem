@@ -24,6 +24,18 @@
 </div>
 
 <div class="pure-u-1 pure-u-lg-1-6">
+  <%= f.label 'じゃけ' %>
+</div>
+<div class="pure-u-1 pure-u-lg-5-6">
+  <% Illustration.all.each do |illustration| %>
+    <label class="pure-radio">
+      <input value="<%= illustration.id %>" name="song[illustration_id]" type="radio">
+      <%= image_tag illustration_backend_illustration_path(illustration) %>
+    </label>
+  <% end %>
+</div>
+
+<div class="pure-u-1 pure-u-lg-1-6">
   <%= f.label '難易度' %>
 </div>
 <div class="pure-u-1 pure-u-lg-5-6">
@@ -39,6 +51,12 @@
   <% end %>
 </div>
 
+<div class="pure-u-1 pure-u-lg-1-6">
+  <%= f.label 'P名' %>
+</div>
+<div class="pure-u-1 pure-u-lg-5-6">
+  <%= f.select :composer_id, @composers.map{|t| [t.name, t.id]} %>
+</div>
 
 <div class="pure-u-1 pure-u-lg-1-6">
   <%= f.label 'ボーカル' %>

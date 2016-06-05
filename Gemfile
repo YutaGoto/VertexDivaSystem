@@ -15,6 +15,7 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+# PureCSS
 gem 'purecss-rails'
 
 # Use jquery as the JavaScript library
@@ -57,6 +58,7 @@ group :development, :test do
 
   gem 'rails-erd', github: 'ready4god2513/rails-erd', branch: 'rails-4.2-support-fix'
 
+  # coding check
   gem 'rubocop'
 end
 

@@ -1,0 +1,18 @@
+<div>
+  <%= @illustration.try(:id) %>
+</div>
+
+<div class="pure-u-1 pure-u-lg-1-6">
+  <%= f.label 'イラスト' %>
+</div>
+<div class="pure-u-1 pure-u-lg-5-6">
+  <%= f.file_field :illustration, accept: 'image/png,image/gif,image/jpeg' %>
+</div>
+
+<div class="pure-u-1 pure-u-lg-1-6">
+  <%= f.label 'イラストレータ名' %>
+</div>
+<div class="pure-u-1 pure-u-lg-5-6">
+  <%= f.select :illustrator_id, @illustrators.map{|t| [t.name, t.id]} %>
+</div>
+

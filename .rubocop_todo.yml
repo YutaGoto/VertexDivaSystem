@@ -33,7 +33,6 @@ Metrics/PerceivedComplexity:
 # Offense count: 4
 Style/AsciiComments:
   Exclude:
-    - 'app/models/admin.rb'
     - 'db/seeds.rb'
 
 # Offense count: 22
@@ -44,7 +43,7 @@ Style/ClassAndModuleChildren:
 
 # Offense count: 35
 Style/Documentation:
-  Enabled: false
+  Enabled: true
 
 
 AllCops:
@@ -53,6 +52,7 @@ AllCops:
     - 'bin/**/*'
     - 'config/**/*'
     - 'db/**/*'
+    - 'db/schema.rb'
     - 'script/**/*'
     - 'vendor/bundle/**/*'
     - 'Gemfile'
